@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online voting system</title>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"   crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<video class="col-sm-12" autoplay muted loop id="myVideo">
+  <source src="Images/voting.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+   <h1>Please Vote For Better Country</h1>
+   <p>Please follow the given instruction <br>1) Please Take Your Enrollment No <br> 2)Go for Registration <br> 3)Then Go For Login and vote for candidate </p>
+   <button class="btn btn-danger" id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<div class="parent col-sm-2">
+   <!------------------------------------------All Control Buttons---------------------------------------------------------->
+   
+
+   <div class="demo" class="controls">
+     <h3 class="text-center pt-5" style="color:white;">Controls</h3>
+     <div class="pt-5" id="info">
+        <p>Go for a voting</p>
+        <button id="l_btn" class="controlBtn">Login</button>
+     </div>
+     <div class="pt-5" id="info">
+        <p>Go for a Registration</p>
+        <button id="r_btn" class="controlBtn">Registration</button>
+     </div>
+     <div class="pt-5" id="info">
+        <p>Go for Result</p>
+        <button id="resultBtn" class="controlBtn">Result</button>
+     </div>
+     
+   </div>
+
+   <!------------------------------------------------- Login Form----------------------------------------------------->
+   
+
+  <div class="demo" id="login_form">
+      <form method="POST" action=" ">
+         <h3  class="text-center pt-5 pb-3" style="color:white;" id="info">Login</h3>
+          <div class="form-group">
+           <img class="login_logo" src="Images/login.jpg" alt="">
+          
+          </div>
+          <div class="form-group">
+             <input id="form_ip" class="form-control" type="text" name="name" placeholder="Enter Your Name" required>
+          </div>
+          <div class="form-group">
+            <input id="form_ip" class="form-control" type="text" name="id" placeholder="Voter Id" required="">
+          </div>
+          <div class="form-group">
+            <select id="form_ip" name='role'class="form-control">
+               <option value="voter">Voter</option>
+               <option value="Admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+             <input id="form_ip" class="btn btn-primary form-control " type="Submit" name="login">
+          </div>
+      </form>
+      <p style="color:red;" onclick="myReload()" class="text-center">Home</p>  
+  </div>
+
+  <!-------------------------------------------  Registration Form------------------------------------------------------>
+  
+  <div class="demo" id="reg_form">
+    <form method="POST" action="registration.php">
+         <h3  class="text-center pt-5 pb-3" style="color:white;" id="info">Registration</h3>
+          
+         <div class="form-group">
+           <input id="form_ip" class="form-control"  type="text" name="name" placeholder="Enter Your Name" required>
+         </div>
+         <div class="form-group">
+           <input id="form_ip" class="form-control"  type="text" name="En_no" placeholder="Enter Your Enrollment" required>
+         </div>
+         <div class="form-group">
+           <input id="form_ip" class="form-control"   type="date" name="DOB" placeholder="Enter Your DOB" required >
+         </div>
+         <div class="form-group">
+           <input id="form_ip" class="form-control"  type="text" name="collage" placeholder="Your collage name" required>
+         </div>
+         <div class="form-group">
+           <input id="form_ip" class="form-control"  type="file" name="image" placeholder="Enter Your Name" >
+         </div>
+         <div>
+             <input id="form_ip" type="submit" name="submit" class=" btn btn-primary" >
+         </div>
+         
+    </form>
+    <p style="color:red;" onclick="myReload()"  class="text-center">Home</p>
+     <p class="text-center pt-2" style="color:white;" id="Enroll">get Enrollment</p>
+      
+  </div>
+
+
+
+
+
+  <!--------------------------------------------------Get Enrollment Form-------------------------------------------------->
+  <div class="demo" id="get_en">
+  <form action="">
+       <h3  class="text-center pt-5" style="color:white;" id="info">Get Enrollment</h3>
+        <div class="form-group" >
+          <img class="login_logo" src="Images/login.jpg" alt="">
+        </div>
+        <div class="form-group">
+            <input id="form_ip" type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+           <button  class="btn btn-primary" id="form_ip" type="Submit" name="GetEnroll">Submit</button>
+        </div>
+  </form>
+
+  <p style="color:red;" onclick="myReload()" class="text-center">Home</p>
+  </div>
+  
+
+
+
+
+  <!-----------------------------------------------------View Result page-------------------------------------------------->
+  
+  <!-- <div class="r_class" id="result"> 
+   <div class="card">
+      <div class="card-header">
+         <h3  class="text-center pt-5" style="color:white;" id="info">Winning Candidate</h3>
+      </div>
+       <div class="card-body">
+             <div class="row">
+                <div class="col-sm-12">
+                  <div class="col-sm-6">
+                    <img class="w_img" src="Images/profile.jpg" alt="">
+                    <img class="w_img pt-2" src="Images/book.jpeg" alt="">
+                  </div>
+                  <div class="col-sm-6">
+                     <h5>Candidate Information</h5>
+                      <table class="table">
+                          <tr>
+                            <td>Candidate Name :</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>Party Name :</td>
+                            <td></td>
+                          </tr><tr>
+                            <td>DOB :</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td> Address :</td>
+                            <td></td>
+                          </tr>
+                      </table>
+                  </div>
+                </div>
+             </div>
+       </div>
+    </div> -->
+  
+      
+  
+  
+  <!-- </div> -->
+</div>
+<!--******************************************************** Result **************************************************-->
+
+<div class=" container r_class" id="result"> 
+  <div class="card">
+     <div class="card-header bg-primary">
+        <h3  class="text-center pt-8" style="color:white;" id="info">Winning Candidate</h3>
+     </div>
+      <div class="card-body">
+            <div class="row">
+               <!-- <div class="col-sm-12"> -->
+                 <div class="col-sm-6">
+                   <h5 class="pt-2">Candidate Image</h5>
+                   <img class="pt-2 w_img" src="Images/profile.jpg" alt="">
+                   <h5 class="pt-4">Party Image</h5>
+                   <img class=" w_img pt-2" src="Images/book.jpeg" alt="">
+                 </div>
+                 <div class="col-sm-6 pt-4">
+                    <h5>Candidate Information</h5>
+                     <table class="table">
+                         <tr>
+                           <td>Candidate Name :</td>
+                           <td></td>
+                         </tr>
+                         <tr>
+                           <td>Party Name :</td>
+                           <td></td>
+                         </tr><tr>
+                           <td>DOB :</td>
+                           <td></td>
+                         </tr>
+                         <tr>
+                           <td> Address :</td>
+                           <td></td>
+                         </tr>
+                     </table>
+                 </div>
+               </div>
+            </div>
+            <button  onclick="myReload()" class="btn btn-danger closeBtn">Close</button>
+      </div>
+    </div>  
+
+<script>
+    function myReload()
+    {
+      location.reload();
+    }
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

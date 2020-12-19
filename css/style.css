@@ -1,0 +1,105 @@
+/*************************************************New Index Page***********************************************************/
+video#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color:#f1f1f1;
+    padding:20px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.parent.col-sm-2 {
+    float: right;
+    position: relative;
+    margin-right: 2.5%;
+}
+div.demo {
+    background: rgb(64, 50, 102);
+    
+    height: 500px;
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 5%;
+    position:absolute;
+    top: 0;
+    opacity: 1.0;
+}
+
+#controls{
+    display: block;
+}
+
+#login_form{
+    display: none;
+}
+
+#reg_form{
+    display:none;
+}
+
+#get_en{
+    display:none;
+}
+
+#result{
+    display:none;
+}
+
+
+/* Control Buttons*/
+
+div#info {
+    color: darkorange;
+    font-style: oblique;
+    text-align: center;
+}
+
+button.controlBtn {
+    width: 100px;
+    background: deepskyblue;
+    border-radius: 11px;
+}
+
+button.controlBtn:hover{
+    color: seashell;
+    background-color: orangered;
+}
+
+#form_ip {
+    width: 199px;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+
+.login_logo{
+    width: 49%;
+    height: 10%;
+    margin-left: 63px;
+    border-radius: 100px;
+}
+
+.w_img{
+    width:50%;
+    height:20%;
+
+}
+
+div.r_class {
+    margin-top: 5%;
+    width:50%;
+}
+
+.closeBtn{
+
+    margin-left: 40%;
+    margin-bottom:2%;
+    width:20%;
+}
